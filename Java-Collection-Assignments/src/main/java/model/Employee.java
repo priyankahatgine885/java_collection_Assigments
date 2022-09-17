@@ -33,4 +33,15 @@ public class Employee {
 
         }
     }
+    public void searchEmployeeById(int emp_id){
+        List<Employee> employeeList = getEmployeeDetails();
+        for (Employee emp:employeeList) {
+            if(emp.getEmp_id() == emp_id){
+               System.out.println(emp.toString());
+            }else {
+                System.out.println("Employee id does not exit");
+            }
+        }
+
+    }
 }
